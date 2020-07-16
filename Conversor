@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>. Conversor de Temperatur@s .</title>
+	<meta charset="utf-8"></head>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script type="text/javascript" src="script.js"></script>
+	
+<body>
+
+	<p>
+		Bem vindo ao Conversor de Temperaturas!
+	</p>
+</br>
+
+<table width="100%">
+	<tr>
+		<th><input type="button" onclick="celsiusxFahrenheit()" value="Celsius > Fahrenheit"/></th>
+		<th><input type="button" onclick="celsiusxKelvin()" value="Celsius > Kelvin"/></th>
+		<th><input type="button" onclick="fahrenheitxKelvin()" value="Fahrenheit > Kelvin"/></th>
+	</tr>
+	<tr>
+		<th><input type="button" onclick="fahrenheitxCelsius()" value="Fahrenheit > Celsius"/></th>
+		<th><input type="button" onclick="kelvinxCelsius()" value="Kelvin > Celsius"/></th>
+		<th><input type="button" onclick="kelvinxFahrenheit()" value="Kelvin > Fahrenheit"/></th>
+	</tr>		
+</table>
+<br>
+<br>
+
+</body>
+</html>
+
+<Script>
+var valor1;
+	var result;
+
+function celsiusxFahrenheit(){
+	valor1 = prompt("Digite o valor a ser convertido em Fahrenheit");
+	result = 1.8 * valor1 + 32;
+	alert("Valor em Fahrenheit = " + result.toFixed(1) + "°F");
+    
+}
+
+function fahrenheitxCelsius(){
+	valor1 = prompt("Digite o valor a ser convertido em Celsius");
+	result = (valor1 - 32) / 1.8;
+	alert("Valor em Celsius = " + result.toFixed(1) + "°C");
+}
+
+function celsiusxKelvin(){
+	valor1 = prompt("Digite o valor a ser convertido em Kelvin");
+	result = valor1 + 273.15;
+	alert("Valor em Kelvin = " + result + "K");
+}
+
+function kelvinxCelsius(){
+	valor1 = prompt("Digite o valor a ser convertido em Celsius");
+	result = valor1 - 273.15;
+	result = parseFloat(result).toFixed(2);
+	alert("Valor em Celsius = " + result + "°C");
+}
+
+function fahrenheitxKelvin(){
+	valor1 = prompt("Digite o valor a ser convertido em Kelvin");
+	result = (valor1 - 32) * (5 / 9)  + 273.15; 
+	alert("Valor em Kelvin = " + result.toFixed(1) + "K");
+} 
+
+function kelvinxFahrenheit(){
+	valor1 = prompt("Digite o valor a ser convertido em Fahrenheit");
+	result = (valor1 - 273.15) * (9/5) + 32;
+	alert("Valor em Fahrenheit = " + result.toFixed(1) + "°F");
+}
+
+</Script>
+
+
+</body>
+</html>
